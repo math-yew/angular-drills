@@ -1,6 +1,12 @@
-<html>
-	<body>
-		Something
+<html ng-app = "filterApp">
+	<body ng-controller = "mainCtrl">
+		<input type="text" ng-model = "results" placeholder="filter">
+		<ul ng-repeat = "person in myData | filter: results">
+			<li>{{person.name}}</li>
+			<li>{{person.email}}</li>
+			<li>{{person.dateEmployed}}</li>
+			<li>{{person.phone}}</li>
+		</ul>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
